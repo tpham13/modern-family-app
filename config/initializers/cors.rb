@@ -4,10 +4,11 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
     allow do 
         # this allow whatever domain you want here
-        origins "*"
-        resource "*", headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head],
+        origins "http://localhost:3000"
+        resource "*", headers: :any, 
+        methods: [:get, :post, :put, :patch, :delete, :options, :head],
         # crendentials allow you to put the headers back and forth front end and back end
-credentials: false
+credentials: true
     end
  
 end
